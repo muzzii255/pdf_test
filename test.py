@@ -3,8 +3,8 @@ import pdfkit
 import os
 import datetime
 def image_convertor(plaintiff_name,lein):
-    exe_loc = f'C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe'
-    config = pdfkit.configuration(wkhtmltopdf=exe_loc)
+    # exe_loc = f'C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe'
+    # config = pdfkit.configuration(wkhtmltopdf=exe_loc)
     # options = {
     # "enable-local-file-access": "",
     # 'footer-right': "[page]/[topage]",
@@ -43,7 +43,7 @@ def image_convertor(plaintiff_name,lein):
 
     current_cwd = os.getcwd()
     try:
-        pdfkit.from_file(f'{current_cwd}\\test.html',f'{current_cwd}\\{plaintiff_name} {lein} Medicaid Submission Form.pdf',options=options,configuration=config)
+        pdfkit.from_file(f'{current_cwd}\\test.html',f'{current_cwd}\\{plaintiff_name} {lein} Medicaid Submission Form.pdf',options=options)
     except Exception as e:
         print(e)
         
