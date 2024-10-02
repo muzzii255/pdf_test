@@ -27,10 +27,8 @@ options = {
 }
 
 current_cwd = os.getcwd()
-try:
-    pdfkit.from_file('test.html','test.pdf',options=options)
-except Exception as e:
-    print(e)
+pdfkit.from_file(input='test.html',output_path='./test.pdf',options=options)
+
 
 
 
