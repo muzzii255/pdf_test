@@ -43,7 +43,7 @@ def image_convertor(plaintiff_name,lein):
 
     current_cwd = os.getcwd()
     try:
-        pdfkit.from_file(f'{current_cwd}/test.html',f'{current_cwd}/{plaintiff_name} {lein} Medicaid Submission Form.pdf',options=options)
+        pdfkit.from_file(f'test.html',f'{plaintiff_name} {lein} Medicaid Submission Form.pdf',options=options)
     except Exception as e:
         print(e)
         
